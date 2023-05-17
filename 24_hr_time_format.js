@@ -44,7 +44,7 @@ function convert12HrTo24Hr(time){
     var secs_strring = split_string[2].slice(0,-2);
     var ampm_string = split_string[2].slice(-2);
     if(ampm_string == 'PM' && hrs_string < 12){
-        hrs_string = parseInt(hrs_string) + 12;
+        hrs_string = (parseInt(hrs_string) + 12).toString();
     }
     else if(ampm_string == 'AM' && hrs_string == 12){
         hrs_string = '00'
